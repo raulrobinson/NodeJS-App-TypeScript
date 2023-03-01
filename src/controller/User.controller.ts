@@ -1,4 +1,5 @@
-import User,{ IUser } from '../Models/User.model';
+import User, { IUser } from '../model/User.model';
+
 interface ICreateUserInput {
     email: IUser['email'];
     firstName: IUser['firstName'];
