@@ -14,7 +14,11 @@ app.get('/',(req:Request,res : Response ) => {
 })
 
 const PORT = process.env.PORT;
-const db = 'mongodb+srv://rasysbox:Tecnologia123*@cluster0.u0rlupp.mongodb.net/?retryWrites=true&w=majority';
+const URL_MONGODB = process.env.URL_MONGODB;
+const USR_MONGODB = process.env.USR_MONGODB;
+const PSW_MONGODB = process.env.PSW_MONGODB;
+
+const db = `mongodb+srv://${USR_MONGODB}:${PSW_MONGODB}@${URL_MONGODB}`;
 
 Connect({ db });
 Routes({ app })
